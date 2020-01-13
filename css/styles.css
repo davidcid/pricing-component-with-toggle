@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fff;
+  color: #6d708d;
+  text-align: center;
+}
+
+.container {
+  background-color: #f6f6fe;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90%;
+}
+
+.container .pricing {
+  padding: 4rem 1rem;
+}
+
+.container h2 {
+  margin-bottom: 2rem;
+}
+
+.container .selector {
+  margin-bottom: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 400;
+  font-size: 0.6rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container .cards .card {
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 1rem;
+  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.08);
+          box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.08);
+}
+
+.container .cards .card .plan {
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.container .cards .card .price {
+  font-size: 2.8rem;
+  color: #494c5f;
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .cards .card .price span {
+  font-size: 1.4rem;
+}
+
+.container .cards .card .features {
+  font-size: .6rem;
+  color: #b3b5c6;
+}
+
+.container .cards .card .features .feature {
+  list-style: none;
+  padding: 0.5rem 0;
+  border-top: 1px solid #f6f6fe;
+}
+
+.container .cards .card .features .feature:last-child {
+  border-bottom: 1px solid #f6f6fe;
+}
+
+.container .cards .card button {
+  text-transform: uppercase;
+  width: 90%;
+  border: none;
+  color: #fff;
+  margin: 1rem 0;
+  font-size: 0.5rem;
+  padding: 0.5rem 0;
+  border-radius: 4px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#a3a8f0), to(#696fdd));
+  background-image: linear-gradient(to right, #a3a8f0, #696fdd);
+}
+
+.professional {
+  z-index: 1;
+  background-image: -webkit-gradient(linear, left top, right top, from(#a3a8f0), to(#696fdd));
+  background-image: linear-gradient(to right, #a3a8f0, #696fdd);
+  color: #fff;
+}
+/*# sourceMappingURL=styles.css.map */
