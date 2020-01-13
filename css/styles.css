@@ -3,10 +3,10 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-size: 15px;
 }
 
 body {
-  font-size: 15px;
   font-weight: 700;
   font-family: "Montserrat", sans-serif;
   background-color: #fff;
@@ -27,6 +27,9 @@ body {
       -ms-flex-align: center;
           align-items: center;
   width: 90%;
+  margin-top: 10rem;
+  padding: 3rem;
+  position: relative;
 }
 
 .container .pricing {
@@ -35,6 +38,7 @@ body {
 
 .container h2 {
   margin-bottom: 2rem;
+  font-size: 1.5rem;
 }
 
 .container .selector {
@@ -47,6 +51,29 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .selector .switch {
+  background-image: -webkit-gradient(linear, left top, right top, from(#a3a8f0), to(#696fdd));
+  background-image: linear-gradient(to right, #a3a8f0, #696fdd);
+  width: 36px;
+  height: 20px;
+  border-radius: 100px;
+  margin: 0 1rem;
+  position: relative;
+}
+
+.container .selector .switch .ball {
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  background-color: #fff;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
 }
 
 .container .cards {
@@ -56,6 +83,7 @@ body {
 }
 
 .container .cards .card {
+  width: 16rem;
   background-color: #fff;
   border-radius: 4px;
   padding: 1rem;
@@ -65,7 +93,8 @@ body {
 
 .container .cards .card .plan {
   font-size: 0.8rem;
-  margin-bottom: 1rem;
+  margin-top: 0.6rem;
+  margin-bottom: 0.6rem;
 }
 
 .container .cards .card .price {
@@ -78,18 +107,22 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .container .cards .card .price span {
   font-size: 1.4rem;
+  margin-right: 0.2rem;
 }
 
 .container .cards .card .features {
-  font-size: 0.6rem;
   color: #b3b5c6;
 }
 
 .container .cards .card .features .feature {
+  font-size: 0.8rem;
   list-style: none;
   padding: 0.5rem 0;
   border-top: 1px solid #f6f6fe;
@@ -101,6 +134,7 @@ body {
 
 .container .cards .card button {
   text-transform: uppercase;
+  letter-spacing: 2px;
   width: 90%;
   border: none;
   color: #fff;
@@ -116,8 +150,8 @@ body {
   z-index: 1;
   background-image: -webkit-gradient(linear, left top, right top, from(#a3a8f0), to(#696fdd));
   background-image: linear-gradient(to right, #a3a8f0, #696fdd);
-  -webkit-transform: scale(1.08);
-          transform: scale(1.08);
+  -webkit-transform: scaleY(1.1);
+          transform: scaleY(1.1);
 }
 
 .container .cards .professional .plan {

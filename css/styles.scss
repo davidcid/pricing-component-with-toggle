@@ -11,10 +11,10 @@ $desktop: 1440px;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 15px;
 }
 
 body {
-  font-size: 15px;
   font-weight: 700;
   font-family: "Montserrat", sans-serif;
   background-color: #fff;
@@ -29,6 +29,9 @@ body {
   justify-content: center;
   align-items: center;
   width: 90%;
+  margin-top: 10rem;
+  padding: 3rem;
+  position: relative;
 
   .pricing {
     padding: 4rem 1rem;
@@ -36,6 +39,7 @@ body {
 
   h2 {
     margin-bottom: 2rem;
+    font-size: 1.5rem;
   }
 
   .selector {
@@ -44,12 +48,37 @@ body {
     font-weight: 400;
     font-size: 0.6rem;
     justify-content: center;
+    align-items: center;
+
+    .switch {
+      background-image: linear-gradient(
+        to right,
+        hsl(236, 72%, 79%),
+        hsl(237, 63%, 64%)
+      );
+      width: 36px;
+      height: 20px;
+      border-radius: 100px;
+      margin: 0 1rem;
+      position: relative;
+
+      .ball {
+        position: absolute;
+        height: 16px;
+        width: 16px;
+        background-color: #fff;
+        border-radius: 50%;
+        top: 2px;
+        left: 2px;
+      }
+    }
   }
 
   .cards {
     display: flex;
 
     .card {
+      width: 16rem;
       background-color: #fff;
       border-radius: $border-raduis;
       padding: 1rem;
@@ -57,7 +86,8 @@ body {
 
       .plan {
         font-size: 0.8rem;
-        margin-bottom: 1rem;
+        margin-top: 0.6rem;
+        margin-bottom: 0.6rem;
       }
 
       .price {
@@ -66,17 +96,19 @@ body {
         margin-bottom: 1rem;
         display: flex;
         align-items: center;
+        justify-content: center;
 
         span {
           font-size: 1.4rem;
+          margin-right: 0.2rem;
         }
       }
 
       .features {
-        font-size: 0.6rem;
         color: $light-gl;
 
         .feature {
+          font-size: 0.8rem;
           list-style: none;
           padding: 0.5rem 0;
           border-top: 1px solid $very-light-gl;
@@ -89,6 +121,7 @@ body {
 
       button {
         text-transform: uppercase;
+        letter-spacing: 2px;
         width: 90%;
         border: none;
         color: #fff;
@@ -111,7 +144,7 @@ body {
         hsl(236, 72%, 79%),
         hsl(237, 63%, 64%)
       );
-      transform: scale(1.08);
+      transform: scaleY(1.1);
 
       .plan {
         color: #fff;
