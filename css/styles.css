@@ -8,7 +8,7 @@
 body {
   font-size: 15px;
   font-weight: 700;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   background-color: #fff;
   color: #6d708d;
   text-align: center;
@@ -85,7 +85,7 @@ body {
 }
 
 .container .cards .card .features {
-  font-size: .6rem;
+  font-size: 0.6rem;
   color: #b3b5c6;
 }
 
@@ -112,10 +112,29 @@ body {
   background-image: linear-gradient(to right, #a3a8f0, #696fdd);
 }
 
-.professional {
+.container .cards .professional {
   z-index: 1;
   background-image: -webkit-gradient(linear, left top, right top, from(#a3a8f0), to(#696fdd));
   background-image: linear-gradient(to right, #a3a8f0, #696fdd);
+  -webkit-transform: scale(1.08);
+          transform: scale(1.08);
+}
+
+.container .cards .professional .plan {
   color: #fff;
+}
+
+.container .cards .professional .price {
+  color: #fff;
+}
+
+.container .cards .professional ul li {
+  color: #fff;
+}
+
+.container .cards .professional button {
+  background-image: none;
+  background-color: #fff;
+  color: #6d708d;
 }
 /*# sourceMappingURL=styles.css.map */

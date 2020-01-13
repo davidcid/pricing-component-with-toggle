@@ -8,102 +8,128 @@ $mobile: 375px;
 $desktop: 1440px;
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-size: 15px;
-    font-weight: 700;
-    font-family: 'Montserrat', sans-serif;
-    background-color: #fff;
-    color: $grayish-blue;
-    text-align: center;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  background-color: #fff;
+  color: $grayish-blue;
+  text-align: center;
 }
 
 .container {
-    background-color: $very-light-gl;
-    margin: 0 auto;
+  background-color: $very-light-gl;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+
+  .pricing {
+    padding: 4rem 1rem;
+  }
+
+  h2 {
+    margin-bottom: 2rem;
+  }
+
+  .selector {
+    margin-bottom: 2rem;
     display: flex;
+    font-weight: 400;
+    font-size: 0.6rem;
     justify-content: center;
-    align-items: center;
-    width: 90%;
+  }
 
-    .pricing {
-        padding: 4rem 1rem;
-    }
+  .cards {
+    display: flex;
 
-    h2 {
-        margin-bottom: 2rem;
-    }
+    .card {
+      background-color: #fff;
+      border-radius: $border-raduis;
+      padding: 1rem;
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.08);
 
-    .selector {
-        margin-bottom: 2rem;
+      .plan {
+        font-size: 0.8rem;
+        margin-bottom: 1rem;
+      }
+
+      .price {
+        font-size: 2.8rem;
+        color: $dark-gl;
+        margin-bottom: 1rem;
         display: flex;
-        font-weight: 400;
-        font-size: 0.6rem;
-        justify-content: center;
-    }
+        align-items: center;
 
-    .cards {
-        display: flex;
-
-        .card {
-            background-color: #fff;
-            border-radius: $border-raduis;
-            padding: 1rem;
-            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.08);
-
-            .plan {
-                font-size: 0.8rem;
-                margin-bottom: 1rem;
-            }
-
-            .price {
-                font-size: 2.8rem;
-                color: $dark-gl;
-                margin-bottom: 1rem;
-                display: flex;
-                align-items: center;
-
-                span {
-                    font-size: 1.4rem;
-                }
-            }
-
-            .features {
-                font-size: .6rem;
-                color: $light-gl;
-
-                .feature {
-                    list-style: none;
-                    padding: 0.5rem 0;
-                    border-top: 1px solid $very-light-gl;
-                }
-
-                .feature:last-child {
-                    border-bottom: 1px solid $very-light-gl;
-                }
-            }
-
-            button {
-                text-transform: uppercase;
-                width: 90%;
-                border: none;
-                color: #fff;
-                margin: 1rem 0;
-                font-size: 0.5rem;
-                padding: 0.5rem 0;
-                border-radius: $border-raduis;
-                background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
-            }
+        span {
+          font-size: 1.4rem;
         }
-    }
-}
+      }
 
-.professional {
-    z-index: 1;
-    background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
-    color: #fff;
+      .features {
+        font-size: 0.6rem;
+        color: $light-gl;
+
+        .feature {
+          list-style: none;
+          padding: 0.5rem 0;
+          border-top: 1px solid $very-light-gl;
+        }
+
+        .feature:last-child {
+          border-bottom: 1px solid $very-light-gl;
+        }
+      }
+
+      button {
+        text-transform: uppercase;
+        width: 90%;
+        border: none;
+        color: #fff;
+        margin: 1rem 0;
+        font-size: 0.5rem;
+        padding: 0.5rem 0;
+        border-radius: $border-raduis;
+        background-image: linear-gradient(
+          to right,
+          hsl(236, 72%, 79%),
+          hsl(237, 63%, 64%)
+        );
+      }
+    }
+
+    .professional {
+      z-index: 1;
+      background-image: linear-gradient(
+        to right,
+        hsl(236, 72%, 79%),
+        hsl(237, 63%, 64%)
+      );
+      transform: scale(1.08);
+
+      .plan {
+        color: #fff;
+      }
+
+      .price {
+        color: #fff;
+      }
+
+      ul li {
+        color: #fff;
+      }
+
+      button {
+        background-image: none;
+        background-color: #fff;
+        color: $grayish-blue;
+      }
+    }
+  }
 }
