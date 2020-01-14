@@ -12,11 +12,21 @@ body {
   background-color: #fff;
   color: #6d708d;
   text-align: center;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .container {
+  height: 40rem;
   background-color: #f6f6fe;
-  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -27,9 +37,9 @@ body {
       -ms-flex-align: center;
           align-items: center;
   width: 65rem;
-  margin-top: 3rem;
   padding: 1rem;
   position: relative;
+  overflow: hidden;
 }
 
 .container .pricing {
@@ -64,6 +74,7 @@ body {
   border-radius: 100px;
   margin: 0 1rem;
   position: relative;
+  cursor: pointer;
 }
 
 .container .selector .switch .ball {
@@ -74,6 +85,13 @@ body {
   border-radius: 50%;
   top: 2px;
   left: 2px;
+  -webkit-transition: 0.2s ease-out all;
+  transition: 0.2s ease-out all;
+}
+
+.container .selector .switch .ball.monthly {
+  -webkit-transform: translateX(16px);
+          transform: translateX(16px);
 }
 
 .container .cards {
@@ -89,6 +107,10 @@ body {
   padding: 1rem;
   -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.08);
           box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.08);
+}
+
+.container .cards .card.basic, .container .cards .card.master {
+  z-index: 1;
 }
 
 .container .cards .card .plan {
@@ -141,9 +163,9 @@ body {
   margin: 1rem 0;
   font-size: 0.5rem;
   padding: 0.5rem 0;
-  border-radius: 4px;
   background-image: -webkit-gradient(linear, left top, right top, from(#a3a8f0), to(#696fdd));
   background-image: linear-gradient(to right, #a3a8f0, #696fdd);
+  border-radius: 4px;
 }
 
 .container .cards .professional {
@@ -170,5 +192,37 @@ body {
   background-image: none;
   background-color: #fff;
   color: #6d708d;
+}
+
+.container .bg-bottom {
+  position: absolute;
+  bottom: -60px;
+  left: -80px;
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+}
+
+.container .bg-top {
+  position: absolute;
+  top: -150px;
+  right: -80px;
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 3rem;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -7,6 +7,21 @@ $border-raduis: 4px;
 $mobile: 375px;
 $desktop: 1440px;
 
+@mixin gradient {
+  background-image: linear-gradient(
+    to right,
+    hsl(236, 72%, 79%),
+    hsl(237, 63%, 64%)
+  );
+}
+
+// Media Query Mixins
+@mixin mediaMobile {
+  @media screen and (max-width: $mobile) {
+    @content;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -20,18 +35,22 @@ body {
   background-color: #fff;
   color: $grayish-blue;
   text-align: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {
+  height: 40rem;
   background-color: $very-light-gl;
-  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 65rem;
-  margin-top: 3rem;
   padding: 1rem;
   position: relative;
+  overflow: hidden;
 
   .pricing {
     padding: 4rem 1rem;
@@ -51,16 +70,13 @@ body {
     align-items: center;
 
     .switch {
-      background-image: linear-gradient(
-        to right,
-        hsl(236, 72%, 79%),
-        hsl(237, 63%, 64%)
-      );
+      @include gradient();
       width: 36px;
       height: 20px;
       border-radius: 100px;
       margin: 0 1rem;
       position: relative;
+      cursor: pointer;
 
       .ball {
         position: absolute;
@@ -70,6 +86,11 @@ body {
         border-radius: 50%;
         top: 2px;
         left: 2px;
+        transition: 0.2s ease-out all;
+
+        &.monthly {
+          transform: translateX(16px);
+        }
       }
     }
   }
@@ -83,6 +104,11 @@ body {
       border-radius: $border-raduis;
       padding: 1rem;
       box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.08);
+
+      &.basic,
+      &.master {
+        z-index: 1;
+      }
 
       .plan {
         font-size: 0.8rem;
@@ -128,22 +154,14 @@ body {
         margin: 1rem 0;
         font-size: 0.5rem;
         padding: 0.5rem 0;
+        @include gradient();
         border-radius: $border-raduis;
-        background-image: linear-gradient(
-          to right,
-          hsl(236, 72%, 79%),
-          hsl(237, 63%, 64%)
-        );
       }
     }
 
     .professional {
       z-index: 1;
-      background-image: linear-gradient(
-        to right,
-        hsl(236, 72%, 79%),
-        hsl(237, 63%, 64%)
-      );
+      @include gradient();
       transform: scaleY(1.1);
 
       .plan {
@@ -165,4 +183,28 @@ body {
       }
     }
   }
+
+  .bg-bottom {
+    position: absolute;
+    bottom: -60px;
+    left: -80px;
+    transform: scale(0.7);
+  }
+
+  .bg-top {
+    position: absolute;
+    top: -150px;
+    right: -80px;
+    transform: scale(0.7);
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
 }
