@@ -2,7 +2,7 @@ $grayish-blue: hsl(233, 13%, 49%);
 $very-light-gl: hsl(240, 78%, 98%);
 $light-gl: hsl(234, 14%, 74%);
 $dark-gl: hsl(232, 13%, 33%);
-$border-raduis: 4px;
+$border-raduis: 3%;
 
 $mobile: 375px;
 $desktop: 1440px;
@@ -160,10 +160,11 @@ body {
       }
     }
 
-    .professional {
-      z-index: 1;
+    .card.professional {
+      z-index: 5;
       @include gradient();
-      transform: scaleY(1.1);
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+      transform: scale(1.1);
 
       .plan {
         color: #fff;
@@ -208,4 +209,33 @@ footer {
   position: absolute;
   width: 100%;
   bottom: 0;
+}
+
+@include mediaMobile {
+  body {
+    height: 100%;
+    display: block;
+  }
+
+  .container {
+    height: 100%;
+    width: 100%;
+
+    .cards {
+      flex-direction: column;
+
+      .card {
+        margin: 0.5rem 0;
+        width: 85vw;
+      }
+
+      .card.professional {
+        transform: scale(1);
+      }
+    }
+  }
+
+  footer {
+    position: relative;
+  }
 }
