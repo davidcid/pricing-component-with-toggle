@@ -156,6 +156,7 @@ body {
         padding: 0.5rem 0;
         @include gradient();
         border-radius: $border-raduis;
+        cursor: pointer;
       }
     }
 
